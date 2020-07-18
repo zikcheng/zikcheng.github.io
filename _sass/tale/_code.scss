@@ -1,46 +1,115 @@
-pre,
-code {
-  font-family: $monospaced;
-}
+// pre,
+// code {
+//   font-family: $monospaced;
+// }
+
+// code {
+//   background-color: $grey-3;
+//   border-radius: 3px;
+//   color: $code-color;
+//   font-size: 85%;
+//   padding: .25em .5em;
+// }
+
+// pre {
+//   margin: 0 0 1rem;
+// }
+
+// pre code {
+//   background-color: transparent;
+//   color: inherit;
+//   font-size: 100%;
+//   padding: 0;
+// }
+
+// .highlight {
+//   background-color: $grey-3;
+//   border-radius: 3px;
+//   line-height: 1.4;
+//   margin: 0 0 1rem;
+//   padding: 1rem;
+
+//   pre {
+//     margin-bottom: 0;
+//     overflow-x: auto;
+//   }
+
+//   .lineno {
+//     color: $default-tint;
+//     display: inline-block; // Ensures the null space also isn't selectable
+//     padding: 0 .75rem 0 .25rem;
+//     // Make sure numbers aren't selectable
+//     -webkit-user-select: none;
+//        -moz-user-select: none;
+//             user-select: none;
+//   }
+// }
 
 code {
-  background-color: $grey-3;
-  border-radius: 3px;
-  color: $code-color;
-  font-size: 85%;
-  padding: .25em .5em;
+  padding: 2px 4px;
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  font-size: 0.9rem;
+  color: $code-text-color;
+  background-color: $code-bg-color;
+  border-radius: 0.3rem;
 }
 
 pre {
-  margin: 0 0 1rem;
-}
+  padding: 0.8rem;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font: 1rem Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  color: $code-text-color;
+  word-wrap: normal;
+  background-color: $code-bg-color;
+  border: solid 1px $border-color;
+  border-radius: 0.3rem;
 
-pre code {
-  background-color: transparent;
-  color: inherit;
-  font-size: 100%;
-  padding: 0;
+  > code {
+    padding: 0;
+    margin: 0;
+    font-size: 0.9rem;
+    color: $code-text-color;
+    word-break: normal;
+    white-space: pre;
+    background: transparent;
+    border: 0;
+  }
 }
 
 .highlight {
-  background-color: $grey-3;
-  border-radius: 3px;
-  line-height: 1.4;
-  margin: 0 0 1rem;
-  padding: 1rem;
+  margin-bottom: 1rem;
 
   pre {
     margin-bottom: 0;
-    overflow-x: auto;
+    word-break: normal;
   }
+}
 
-  .lineno {
-    color: $default-tint;
-    display: inline-block; // Ensures the null space also isn't selectable
-    padding: 0 .75rem 0 .25rem;
-    // Make sure numbers aren't selectable
-    -webkit-user-select: none;
-       -moz-user-select: none;
-            user-select: none;
+.highlight pre,
+pre {
+  padding: 0.8rem;
+  overflow: auto;
+  font-size: 0.9rem;
+  line-height: 1.45;
+  border-radius: 0.3rem;
+  -webkit-overflow-scrolling: touch;
+}
+
+pre code,
+pre tt {
+  display: inline;
+  max-width: initial;
+  padding: 0;
+  margin: 0;
+  overflow: initial;
+  line-height: inherit;
+  word-wrap: normal;
+  background-color: transparent;
+  border: 0;
+
+  &:before,
+  &:after {
+    content: normal;
   }
 }
