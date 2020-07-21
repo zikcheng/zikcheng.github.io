@@ -18,13 +18,13 @@ cron 是许多类 Unix 操作系统中都自带的用来调度定时任务的工
 这里一个常见的问题是自己手动在终端执行 `/home/user/task.sh` 可以成功，但是 cron 定时调度执行的时候却失败了，大部分情况是由于 cron 执行时环境变量跟我们在终端执行时的环境变量不同导致的。解决问题的办法有很多，本文要介绍的是用 `source ~/.bashrc` （假设用户需要用的环境变量都定义在 `~/.bashrc` 中）。
 
 先直接给出方案，分如下两步：
-1. crontab -e 进行配置的时候在前面加上如下配置
+- crontab -e 进行配置的时候在前面加上如下配置
 
 ```shell
 SHELL = /bin/bash # 指定 shell 为 bash
 ```
 
-2. 在 `/home/user/task.sh` 脚本中加入如下命令
+- 在 `/home/user/task.sh` 脚本中加入如下命令
 
 ```shell
 set -i
