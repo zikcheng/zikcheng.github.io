@@ -7,7 +7,7 @@ title: Python 中 lru_cache 的使用和实现
 
 下面我们通过一个简单的示例来看 Python 中的 lru_cache 是如何使用的。
 
-```python
+``` python
 def factorial(n):
     print(f"计算 {n} 的阶乘")
     return 1 if n <= 1 else n * factorial(n - 1)
@@ -44,7 +44,7 @@ def factorial(n):
     return 1 if n <= 1 else n * factorial(n - 1)
 ```
 
-重新运行代码，输入如下
+重新运行代码，输出如下
 
 ```
 计算 5 的阶乘
